@@ -2,7 +2,7 @@ module.exports = {
   base: '/',
   title: 'Front End',
   head: [
-    ['link', { rel: 'icon', href: `/logo.jpg` }],
+    ['link', { rel: 'icon', href: `/favicon.gz.ico` }],
   ],
   description: ' ',
   themeConfig: {
