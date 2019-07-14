@@ -1,5 +1,5 @@
 module.exports = {
-  base: '/',
+  base: '/notes/',
   title: 'Front End',
   description: ' ',
   themeConfig: {
