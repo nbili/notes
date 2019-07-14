@@ -1,0 +1,24 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "📚 Personal Notes",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs && echo 'note.nbili.com' > ./docs/.vuepress/dist/CNAME"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nbili/notes.git"
+  },
+  "keywords": [],
+  "author": "nbili",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nbili/notes/issues"
+  },
+  "homepage": "https://github.com/nbili/notes#readme",
+  "devDependencies": {
+    "vuepress": "^1.0.2"
+  }
+}
