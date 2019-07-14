@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs"
+    "build": "vuepress build docs && echo 'note.nbili.com' > ./docs/.vuepress/dist/CNAME"
   },
   "repository": {
     "type": "git",

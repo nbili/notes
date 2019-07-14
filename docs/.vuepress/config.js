@@ -1,6 +1,9 @@
 module.exports = {
   base: '/notes/',
   title: 'Front End',
+  head: [
+    ['link', { rel: 'icon', href: `/logo.jpg` }],
+  ],
   description: ' ',
   themeConfig: {
     editLinks: false,
