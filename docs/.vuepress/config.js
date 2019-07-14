@@ -1,6 +1,5 @@
 module.exports = {
   base: '/',
-  dest: './docs/.vuepress/dist',
   title: 'Front End',
   description: ' ',
   themeConfig: {
