@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/nbili/notes#readme",
   "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.0.2",
     "vuepress": "^1.0.2"
   }
 }
