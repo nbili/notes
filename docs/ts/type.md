@@ -146,3 +146,43 @@ enum S {a='a', b='b'}
 
 let s: S = S.a // 只能赋值为枚举内容自身
 ```
+## Symbol
+
+```ts
+let s1: symbol = Symbol()
+```
+
+## undefined & null
+
+```ts
+let u: undefined = undefined
+let n: null = null
+```
+
+## void
+
+没有返回类型
+
+## any
+
+可以是任何类型
+
+## never
+
+异常 或者 死循环 等不会执行的代码返回
+
+```ts
+function err(): never {
+  throw new Error('err')
+}
+
+function loop(): never {
+  while (true) { }
+}
+```
+
+## bigint
+
+```ts
+let f: bigint = 100n // 需要开启 ESNEXT
+```
