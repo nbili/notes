@@ -32,7 +32,9 @@ function getTSSidebar(groupA, groupB, groupC) {
         'interface',
         'function',
         'class',
-        'generics'
+        'generics',
+        'compatibility',
+        'guards'
       ]
     }
   ]
