@@ -28,7 +28,11 @@ function getTSSidebar(groupA, groupB, groupC) {
       title: groupA,
       collapsable: false,
       children: [
-        'type'
+        'type',
+        'interface',
+        'function',
+        'class',
+        'generics'
       ]
     }
   ]
