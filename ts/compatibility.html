@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>类型兼容 | Front End</title>
+    <meta name="description" content=" ">
+    <link rel="icon" href="/favicon.gz.ico">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.016175ee.css" as="style"><link rel="preload" href="/assets/js/app.31d3a29f.js" as="script"><link rel="preload" href="/assets/js/2.9129390c.js" as="script"><link rel="preload" href="/assets/js/10.e4e51f6c.js" as="script"><link rel="prefetch" href="/assets/js/11.9e97f07a.js"><link rel="prefetch" href="/assets/js/12.e60c06af.js"><link rel="prefetch" href="/assets/js/13.976943f5.js"><link rel="prefetch" href="/assets/js/14.91b2c1e9.js"><link rel="prefetch" href="/assets/js/15.b2eac95d.js"><link rel="prefetch" href="/assets/js/16.cbd2fa25.js"><link rel="prefetch" href="/assets/js/3.657dbdc7.js"><link rel="prefetch" href="/assets/js/4.667eabc6.js"><link rel="prefetch" href="/assets/js/5.0de75225.js"><link rel="prefetch" href="/assets/js/6.2ae456d6.js"><link rel="prefetch" href="/assets/js/7.f87c852b.js"><link rel="prefetch" href="/assets/js/8.5bf2b6ca.js"><link rel="prefetch" href="/assets/js/9.dd9be74d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.016175ee.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Front End</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/ts/" class="nav-link router-link-active">TypeScript</a></div><div class="nav-item"><a href="/js/" class="nav-link">JavaScript</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/ts/" class="nav-link router-link-active">TypeScript</a></div><div class="nav-item"><a href="/js/" class="nav-link">JavaScript</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>TS基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/ts/type.html" class="sidebar-link">类型</a></li><li><a href="/ts/interface.html" class="sidebar-link">接口</a></li><li><a href="/ts/function.html" class="sidebar-link">函数</a></li><li><a href="/ts/class.html" class="sidebar-link">类</a></li><li><a href="/ts/generics.html" class="sidebar-link">泛型</a></li><li><a href="/ts/compatibility.html" class="active sidebar-link">类型兼容</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/ts/compatibility.html#接口兼容" class="sidebar-link">接口兼容</a></li><li class="sidebar-sub-header"><a href="/ts/compatibility.html#函数兼容" class="sidebar-link">函数兼容</a></li><li class="sidebar-sub-header"><a href="/ts/compatibility.html#枚举兼容" class="sidebar-link">枚举兼容</a></li><li class="sidebar-sub-header"><a href="/ts/compatibility.html#类兼容性" class="sidebar-link">类兼容性</a></li><li class="sidebar-sub-header"><a href="/ts/compatibility.html#泛型兼容性" class="sidebar-link">泛型兼容性</a></li></ul></li><li><a href="/ts/guards.html" class="sidebar-link">类型保护</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="类型兼容"><a href="#类型兼容" aria-hidden="true" class="header-anchor">#</a> 类型兼容</h1> <p>结构之间兼容：成员少的兼容成员多的
+函数之间兼容：参数多的兼容参数少的</p> <h2 id="接口兼容"><a href="#接口兼容" aria-hidden="true" class="header-anchor">#</a> 接口兼容</h2> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">interface</span> <span class="token class-name">X</span> <span class="token punctuation">{</span>
+  a<span class="token punctuation">:</span> <span class="token builtin">any</span>
+  b<span class="token punctuation">:</span> <span class="token builtin">any</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">interface</span> <span class="token class-name">Y</span> <span class="token punctuation">{</span>
+  a<span class="token punctuation">:</span> <span class="token builtin">any</span>
+  b<span class="token punctuation">:</span> <span class="token builtin">any</span>
+  c<span class="token punctuation">:</span> <span class="token builtin">any</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> x<span class="token punctuation">:</span> <span class="token constant">X</span> <span class="token operator">=</span> <span class="token punctuation">{</span> a<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> b<span class="token punctuation">:</span> <span class="token number">2</span> <span class="token punctuation">}</span>
+<span class="token keyword">let</span> y<span class="token punctuation">:</span> <span class="token constant">Y</span> <span class="token operator">=</span> <span class="token punctuation">{</span> a<span class="token punctuation">:</span> <span class="token number">1</span><span class="token punctuation">,</span> b<span class="token punctuation">:</span> <span class="token number">2</span><span class="token punctuation">,</span> c<span class="token punctuation">:</span> <span class="token number">3</span> <span class="token punctuation">}</span>
+x <span class="token operator">=</span> y
+</code></pre></div><h2 id="函数兼容"><a href="#函数兼容" aria-hidden="true" class="header-anchor">#</a> 函数兼容</h2> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">type</span> <span class="token function-variable function">fun</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">x<span class="token punctuation">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> y<span class="token punctuation">:</span> <span class="token builtin">number</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">void</span>
+<span class="token keyword">function</span> <span class="token function">fun2</span><span class="token punctuation">(</span><span class="token parameter">fn<span class="token punctuation">:</span> fun</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> fn
+<span class="token punctuation">}</span>
+
+<span class="token comment">// 传入的 fn 函数必须兼容 fun</span>
+</code></pre></div><p>参数个数</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">let</span> <span class="token function-variable function">one</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">x<span class="token punctuation">:</span> <span class="token builtin">number</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token function">fun2</span><span class="token punctuation">(</span>one<span class="token punctuation">)</span>
+</code></pre></div><p>可选参数或者剩余参数 (strictFunctionTypes: false)</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">let</span> <span class="token function-variable function">a</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">p1<span class="token punctuation">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> p2<span class="token punctuation">:</span> <span class="token builtin">number</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">let</span> <span class="token function-variable function">b</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">p1<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> p2<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token builtin">number</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">let</span> <span class="token function-variable function">c</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter"><span class="token operator">...</span>args<span class="token punctuation">:</span> <span class="token builtin">number</span><span class="token punctuation">[</span><span class="token punctuation">]</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+a <span class="token operator">=</span> b
+a <span class="token operator">=</span> c
+b <span class="token operator">=</span> a
+b <span class="token operator">=</span> c
+c <span class="token operator">=</span> a
+c <span class="token operator">=</span> b
+</code></pre></div><p>参数类型 双向协变</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">interface</span> <span class="token class-name">Point3D</span> <span class="token punctuation">{</span>
+    x<span class="token punctuation">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+    y<span class="token punctuation">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+    z<span class="token punctuation">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">interface</span> <span class="token class-name">Point2D</span> <span class="token punctuation">{</span>
+    x<span class="token punctuation">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+    y<span class="token punctuation">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> <span class="token function-variable function">p3d</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">point<span class="token punctuation">:</span> Point3D</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">let</span> <span class="token function-variable function">p2d</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">point<span class="token punctuation">:</span> Point2D</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+p3d <span class="token operator">=</span> p2d
+p2d <span class="token operator">=</span> p3d
+</code></pre></div><h2 id="枚举兼容"><a href="#枚举兼容" aria-hidden="true" class="header-anchor">#</a> 枚举兼容</h2> <p>枚举类型可以和 number 相互赋值</p> <p>枚举之间不能互相赋值</p> <h2 id="类兼容性"><a href="#类兼容性" aria-hidden="true" class="header-anchor">#</a> 类兼容性</h2> <p>忽略了构造函数和静态成员</p> <h2 id="泛型兼容性"><a href="#泛型兼容性" aria-hidden="true" class="header-anchor">#</a> 泛型兼容性</h2> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">interface</span> <span class="token class-name">Empty</span><span class="token operator">&lt;</span><span class="token constant">T</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+  value<span class="token punctuation">:</span> <span class="token constant">T</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> o1<span class="token punctuation">:</span> Empty<span class="token operator">&lt;</span><span class="token builtin">number</span><span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token keyword">let</span> o2<span class="token punctuation">:</span> Empty<span class="token operator">&lt;</span><span class="token builtin">string</span><span class="token operator">&gt;</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/ts/generics.html" class="prev">
+          泛型
+        </a></span> <span class="next"><a href="/ts/guards.html">
+          类型保护
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.31d3a29f.js" defer></script><script src="/assets/js/2.9129390c.js" defer></script><script src="/assets/js/10.e4e51f6c.js" defer></script>
+  </body>
+</html>
