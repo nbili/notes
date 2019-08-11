@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>接口 | Front End</title>
+    <meta name="description" content=" ">
+    <link rel="icon" href="/favicon.gz.ico">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.016175ee.css" as="style"><link rel="preload" href="/assets/js/app.a39a033a.js" as="script"><link rel="preload" href="/assets/js/2.9129390c.js" as="script"><link rel="preload" href="/assets/js/12.8b230fa6.js" as="script"><link rel="prefetch" href="/assets/js/10.54c8d5ad.js"><link rel="prefetch" href="/assets/js/11.f1bf34c5.js"><link rel="prefetch" href="/assets/js/13.633b2276.js"><link rel="prefetch" href="/assets/js/14.9f1fc344.js"><link rel="prefetch" href="/assets/js/3.f8e6f427.js"><link rel="prefetch" href="/assets/js/4.667eabc6.js"><link rel="prefetch" href="/assets/js/5.6ddf37a9.js"><link rel="prefetch" href="/assets/js/6.a5c64508.js"><link rel="prefetch" href="/assets/js/7.395d7b22.js"><link rel="prefetch" href="/assets/js/8.5a19ed4b.js"><link rel="prefetch" href="/assets/js/9.dd9be74d.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.016175ee.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Front End</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/ts/" class="nav-link router-link-active">TypeScript</a></div><div class="nav-item"><a href="/js/" class="nav-link">JavaScript</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/ts/" class="nav-link router-link-active">TypeScript</a></div><div class="nav-item"><a href="/js/" class="nav-link">JavaScript</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>TS基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/ts/type.html" class="sidebar-link">类型</a></li><li><a href="/ts/interface.html" class="active sidebar-link">接口</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/ts/interface.html#对象接口" class="sidebar-link">对象接口</a></li><li class="sidebar-sub-header"><a href="/ts/interface.html#可选属性" class="sidebar-link">可选属性</a></li><li class="sidebar-sub-header"><a href="/ts/interface.html#属性索引" class="sidebar-link">属性索引</a></li><li class="sidebar-sub-header"><a href="/ts/interface.html#断言绕过类型检查" class="sidebar-link">断言绕过类型检查</a></li><li class="sidebar-sub-header"><a href="/ts/interface.html#函数接口" class="sidebar-link">函数接口</a></li><li class="sidebar-sub-header"><a href="/ts/interface.html#混合类型接口" class="sidebar-link">混合类型接口</a></li></ul></li><li><a href="/ts/function.html" class="sidebar-link">函数</a></li><li><a href="/ts/class.html" class="sidebar-link">类</a></li><li><a href="/ts/generics.html" class="sidebar-link">泛型</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="接口"><a href="#接口" aria-hidden="true" class="header-anchor">#</a> 接口</h1> <h2 id="对象接口"><a href="#对象接口" aria-hidden="true" class="header-anchor">#</a> 对象接口</h2> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">interface</span> <span class="token class-name">Obj</span> <span class="token punctuation">{</span>
+  id<span class="token punctuation">:</span> <span class="token builtin">number</span>
+  name<span class="token punctuation">:</span> <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> o<span class="token punctuation">:</span> Obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  id<span class="token punctuation">:</span> <span class="token number">23</span><span class="token punctuation">,</span>
+  name<span class="token punctuation">:</span> <span class="token string">'nbili'</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>如果这个时候给 o 添加接口不存在的属性：<code>'age' does not exist in type 'Obj'</code></p> <h2 id="可选属性"><a href="#可选属性" aria-hidden="true" class="header-anchor">#</a> 可选属性</h2> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">interface</span> <span class="token class-name">Obj</span> <span class="token punctuation">{</span>
+  id<span class="token punctuation">:</span> <span class="token builtin">number</span>
+  name<span class="token punctuation">:</span> <span class="token builtin">string</span>
+  age<span class="token operator">?</span><span class="token punctuation">:</span> <span class="token builtin">number</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="属性索引"><a href="#属性索引" aria-hidden="true" class="header-anchor">#</a> 属性索引</h2> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">interface</span> <span class="token class-name">Obj</span> <span class="token punctuation">{</span>
+  id<span class="token punctuation">:</span> <span class="token builtin">number</span>
+  name<span class="token punctuation">:</span> <span class="token builtin">string</span>
+  <span class="token punctuation">[</span>propName<span class="token punctuation">:</span> <span class="token builtin">string</span><span class="token punctuation">]</span><span class="token punctuation">:</span> <span class="token builtin">any</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="断言绕过类型检查"><a href="#断言绕过类型检查" aria-hidden="true" class="header-anchor">#</a> 断言绕过类型检查</h2> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">let</span> o<span class="token punctuation">:</span> Obj <span class="token operator">=</span> <span class="token operator">&lt;</span>Obj<span class="token operator">&gt;</span><span class="token punctuation">{</span>
+  id<span class="token punctuation">:</span> <span class="token number">23</span><span class="token punctuation">,</span>
+  name<span class="token punctuation">:</span> <span class="token string">'nbili'</span><span class="token punctuation">,</span>
+  age<span class="token punctuation">:</span> <span class="token number">12</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 相当于</span>
+<span class="token keyword">let</span> o<span class="token punctuation">:</span> Obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+  id<span class="token punctuation">:</span> <span class="token number">23</span><span class="token punctuation">,</span>
+  name<span class="token punctuation">:</span> <span class="token string">'nbili'</span><span class="token punctuation">,</span>
+  age<span class="token punctuation">:</span> <span class="token number">12</span>
+<span class="token punctuation">}</span> <span class="token keyword">as</span> Obj
+</code></pre></div><h2 id="函数接口"><a href="#函数接口" aria-hidden="true" class="header-anchor">#</a> 函数接口</h2> <p>描述函数接口的三种方式：</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">let</span> <span class="token function-variable function">add</span><span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token parameter">x<span class="token punctuation">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> y<span class="token punctuation">:</span> <span class="token builtin">number</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token builtin">number</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">add</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">(</span>x<span class="token punctuation">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> y<span class="token punctuation">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token builtin">number</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">type</span> <span class="token function-variable function">add</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token parameter">x<span class="token punctuation">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> y<span class="token punctuation">:</span> <span class="token builtin">number</span></span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token builtin">number</span>
+</code></pre></div><h2 id="混合类型接口"><a href="#混合类型接口" aria-hidden="true" class="header-anchor">#</a> 混合类型接口</h2> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">interface</span> <span class="token class-name">Goods</span> <span class="token punctuation">{</span>
+  <span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span>
+  apple<span class="token punctuation">:</span> <span class="token builtin">string</span>
+  eat<span class="token punctuation">:</span> <span class="token builtin">string</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> g<span class="token punctuation">:</span> Goods <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">)</span> <span class="token keyword">as</span> Goods
+g<span class="token punctuation">.</span>apple <span class="token operator">=</span> <span class="token string">'apple'</span>
+g<span class="token punctuation">.</span>eat <span class="token operator">=</span> <span class="token string">'eat'</span>
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/ts/type.html" class="prev">
+          类型
+        </a></span> <span class="next"><a href="/ts/function.html">
+          函数
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.a39a033a.js" defer></script><script src="/assets/js/2.9129390c.js" defer></script><script src="/assets/js/12.8b230fa6.js" defer></script>
+  </body>
+</html>

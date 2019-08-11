@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>类 | Front End</title>
+    <meta name="description" content=" ">
+    <link rel="icon" href="/favicon.gz.ico">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.016175ee.css" as="style"><link rel="preload" href="/assets/js/app.a39a033a.js" as="script"><link rel="preload" href="/assets/js/2.9129390c.js" as="script"><link rel="preload" href="/assets/js/9.dd9be74d.js" as="script"><link rel="prefetch" href="/assets/js/10.54c8d5ad.js"><link rel="prefetch" href="/assets/js/11.f1bf34c5.js"><link rel="prefetch" href="/assets/js/12.8b230fa6.js"><link rel="prefetch" href="/assets/js/13.633b2276.js"><link rel="prefetch" href="/assets/js/14.9f1fc344.js"><link rel="prefetch" href="/assets/js/3.f8e6f427.js"><link rel="prefetch" href="/assets/js/4.667eabc6.js"><link rel="prefetch" href="/assets/js/5.6ddf37a9.js"><link rel="prefetch" href="/assets/js/6.a5c64508.js"><link rel="prefetch" href="/assets/js/7.395d7b22.js"><link rel="prefetch" href="/assets/js/8.5a19ed4b.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.016175ee.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Front End</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/ts/" class="nav-link router-link-active">TypeScript</a></div><div class="nav-item"><a href="/js/" class="nav-link">JavaScript</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/ts/" class="nav-link router-link-active">TypeScript</a></div><div class="nav-item"><a href="/js/" class="nav-link">JavaScript</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>TS基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/ts/type.html" class="sidebar-link">类型</a></li><li><a href="/ts/interface.html" class="sidebar-link">接口</a></li><li><a href="/ts/function.html" class="sidebar-link">函数</a></li><li><a href="/ts/class.html" class="active sidebar-link">类</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/ts/class.html#修饰符" class="sidebar-link">修饰符</a></li><li class="sidebar-sub-header"><a href="/ts/class.html#静态属性" class="sidebar-link">静态属性</a></li><li class="sidebar-sub-header"><a href="/ts/class.html#抽象类" class="sidebar-link">抽象类</a></li><li class="sidebar-sub-header"><a href="/ts/class.html#类和接口" class="sidebar-link">类和接口</a></li></ul></li><li><a href="/ts/generics.html" class="sidebar-link">泛型</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="类"><a href="#类" aria-hidden="true" class="header-anchor">#</a> 类</h1> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">class</span> <span class="token class-name">Greeter</span> <span class="token punctuation">{</span>
+  greeting<span class="token punctuation">:</span> <span class="token builtin">string</span>
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token parameter">message<span class="token punctuation">:</span> <span class="token builtin">string</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>greeting <span class="token operator">=</span> message
+  <span class="token punctuation">}</span>
+  <span class="token function">greet</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token string">'Hello, '</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>greeting
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> greeter <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Greeter</span><span class="token punctuation">(</span><span class="token string">'world'</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="修饰符"><a href="#修饰符" aria-hidden="true" class="header-anchor">#</a> 修饰符</h2> <h3 id="public"><a href="#public" aria-hidden="true" class="header-anchor">#</a> public</h3> <p>共有的属性或方法</p> <div class="language-ts extra-class"><div class="highlight-lines"><br><br><br><br><br><br><div class="highlighted"> </div><br><br><br><br><br><br></div><pre class="language-ts"><code><span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token punctuation">{</span>
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">:</span> <span class="token builtin">string</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">Husky</span> <span class="token keyword">extends</span> <span class="token class-name">Dog</span> <span class="token punctuation">{</span>
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> <span class="token keyword">public</span> color<span class="token punctuation">:</span> <span class="token builtin">string</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>color <span class="token operator">=</span> color
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>Husky<span class="token punctuation">.</span>food<span class="token punctuation">)</span>
+</code></pre></div><h3 id="private"><a href="#private" aria-hidden="true" class="header-anchor">#</a> private</h3> <p>不可在实例/继承中中访问</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">class</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
+  <span class="token keyword">private</span> name<span class="token punctuation">:</span> <span class="token builtin">string</span>
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token parameter">theName<span class="token punctuation">:</span> <span class="token builtin">string</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> theName
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">new</span> <span class="token class-name">Animal</span><span class="token punctuation">(</span><span class="token string">'Cat'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>name <span class="token comment">// 错误: 'name' 是私有的.</span>
+</code></pre></div><h3 id="protected"><a href="#protected" aria-hidden="true" class="header-anchor">#</a> protected</h3> <p>可以在继承中访问，不可以在实例中访问</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">class</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+  <span class="token keyword">protected</span> name<span class="token punctuation">:</span> <span class="token builtin">string</span>
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">:</span> <span class="token builtin">string</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>name <span class="token operator">=</span> name
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Employee</span> <span class="token keyword">extends</span> <span class="token class-name">Person</span> <span class="token punctuation">{</span>
+  <span class="token keyword">private</span> department<span class="token punctuation">:</span> <span class="token builtin">string</span>
+
+  <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token parameter">name<span class="token punctuation">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> department<span class="token punctuation">:</span> <span class="token builtin">string</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>department <span class="token operator">=</span> department
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword">public</span> <span class="token function">getElevatorPitch</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">Hello, my name is </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>name<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> and I work in </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span><span class="token keyword">this</span><span class="token punctuation">.</span>department<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">.</span><span class="token template-punctuation string">`</span></span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> howard <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Employee</span><span class="token punctuation">(</span><span class="token string">'Howard'</span><span class="token punctuation">,</span> <span class="token string">'Sales'</span><span class="token punctuation">)</span>
+<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>howard<span class="token punctuation">.</span><span class="token function">getElevatorPitch</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>howard<span class="token punctuation">.</span>name<span class="token punctuation">)</span> <span class="token comment">// 错误</span>
+</code></pre></div><h3 id="readonly"><a href="#readonly" aria-hidden="true" class="header-anchor">#</a> readonly</h3> <p>使用 <code>readonly</code> 关键字将属性设置为只读的</p> <h2 id="静态属性"><a href="#静态属性" aria-hidden="true" class="header-anchor">#</a> 静态属性</h2> <p>静态只读属性</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">class</span> <span class="token class-name">P</span> <span class="token punctuation">{</span>
+  <span class="token keyword">static</span> <span class="token keyword">readonly</span> v <span class="token operator">=</span> <span class="token number">2333</span>
+<span class="token punctuation">}</span>
+
+<span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token constant">P</span><span class="token punctuation">.</span>v<span class="token punctuation">)</span> <span class="token comment">// 2333</span>
+</code></pre></div><h2 id="抽象类"><a href="#抽象类" aria-hidden="true" class="header-anchor">#</a> 抽象类</h2> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
+  <span class="token keyword">abstract</span> <span class="token function">makeSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span>
+  <span class="token function">move</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'roaming the earch...'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">abstract</span> <span class="token keyword">class</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
+  <span class="token keyword">abstract</span> <span class="token function">makeSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span>
+  <span class="token function">move</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token keyword">void</span> <span class="token punctuation">{</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'roaming the earch...'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Dog</span> <span class="token keyword">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
+  <span class="token function">makeSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Dog sound'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">move</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Dog move'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Cat</span> <span class="token keyword">extends</span> <span class="token class-name">Animal</span> <span class="token punctuation">{</span>
+  <span class="token function">makeSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Cat sound'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">move</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'Cat move'</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> animal<span class="token punctuation">:</span> Animal<span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token keyword">new</span> <span class="token class-name">Dog</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token keyword">new</span> <span class="token class-name">Cat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+animal<span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token parameter">item</span> <span class="token operator">=&gt;</span> item<span class="token punctuation">.</span><span class="token function">makeSound</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre></div><h2 id="类和接口"><a href="#类和接口" aria-hidden="true" class="header-anchor">#</a> 类和接口</h2> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">interface</span> <span class="token class-name">ClockInterface</span> <span class="token punctuation">{</span>
+    currentTime<span class="token punctuation">:</span> Date<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Clock</span> <span class="token keyword">implements</span> <span class="token class-name">ClockInterface</span> <span class="token punctuation">{</span>
+    currentTime<span class="token punctuation">:</span> Date<span class="token punctuation">;</span>
+    <span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="token parameter">h<span class="token punctuation">:</span> <span class="token builtin">number</span><span class="token punctuation">,</span> m<span class="token punctuation">:</span> <span class="token builtin">number</span></span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="类实现接口"><a href="#类实现接口" aria-hidden="true" class="header-anchor">#</a> 类实现接口</h3> <p>类可以实现接口，接口只能约束 类的共有成员</p> <h3 id="接口继承接口"><a href="#接口继承接口" aria-hidden="true" class="header-anchor">#</a> 接口继承接口</h3> <p>接口之间可以相互继承，合并</p> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">interface</span> <span class="token class-name">Shape</span> <span class="token punctuation">{</span>
+    color<span class="token punctuation">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">Square</span> <span class="token keyword">extends</span> <span class="token class-name">Shape</span> <span class="token punctuation">{</span>
+    sideLength<span class="token punctuation">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">let</span> square <span class="token operator">=</span> <span class="token operator">&lt;</span>Square<span class="token operator">&gt;</span><span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+square<span class="token punctuation">.</span>color <span class="token operator">=</span> <span class="token string">&quot;blue&quot;</span><span class="token punctuation">;</span>
+square<span class="token punctuation">.</span>sideLength <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+
+<span class="token comment">// 继承多个接口 用 , 隔开</span>
+<span class="token keyword">interface</span> <span class="token class-name">Shape</span> <span class="token punctuation">{</span>
+    color<span class="token punctuation">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">PenStroke</span> <span class="token punctuation">{</span>
+    penWidth<span class="token punctuation">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">interface</span> <span class="token class-name">Square</span> <span class="token keyword">extends</span> <span class="token class-name">Shape</span><span class="token punctuation">,</span> PenStroke <span class="token punctuation">{</span>
+    sideLength<span class="token punctuation">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="接口继承类"><a href="#接口继承类" aria-hidden="true" class="header-anchor">#</a> 接口继承类</h3> <p>将类抽离成 接口，包括 public protected private 修饰方法和属性, 意味着如果继承的类有修饰符，这个接口只能被这个类或者子类所实现。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/ts/function.html" class="prev">
+          函数
+        </a></span> <span class="next"><a href="/ts/generics.html">
+          泛型
+        </a>
+        →
+      </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.a39a033a.js" defer></script><script src="/assets/js/2.9129390c.js" defer></script><script src="/assets/js/9.dd9be74d.js" defer></script>
+  </body>
+</html>
