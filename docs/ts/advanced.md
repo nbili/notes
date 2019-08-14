@@ -149,8 +149,10 @@ type T4 = TypeName<string[]>;  // "object"
 
 预置条件类型
 
+```ts
 Exclude<T, U>
 NonNullable<T>
 Extract<T, U>
 
 ReturnType<T>
+```

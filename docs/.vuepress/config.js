@@ -35,7 +35,9 @@ function getTSSidebar(groupA, groupB, groupC) {
         'generics',
         'compatibility',
         'guards',
-        'advanced'
+        'advanced',
+        'module',
+        'namespace'
       ]
     }
   ]
