@@ -37,7 +37,8 @@ function getTSSidebar(groupA, groupB, groupC) {
         'guards',
         'advanced',
         'module',
-        'namespace'
+        'namespace',
+        'merge'
       ]
     }
   ]
