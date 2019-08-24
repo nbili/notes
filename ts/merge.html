@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>申明合并 | Front End</title>
+    <meta name="description" content=" ">
+    <link rel="icon" href="/favicon.gz.ico">
+  <meta name="theme-color" content="#3eaf7c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    
+    <link rel="preload" href="/assets/css/0.styles.47262665.css" as="style"><link rel="preload" href="/assets/js/app.7643ad65.js" as="script"><link rel="preload" href="/assets/js/2.a21d1c86.js" as="script"><link rel="preload" href="/assets/js/16.448e2909.js" as="script"><link rel="prefetch" href="/assets/js/10.6e8ddfbf.js"><link rel="prefetch" href="/assets/js/11.ce5775c7.js"><link rel="prefetch" href="/assets/js/12.2e130822.js"><link rel="prefetch" href="/assets/js/13.f5ae68cc.js"><link rel="prefetch" href="/assets/js/14.e193d9d9.js"><link rel="prefetch" href="/assets/js/15.51d9d879.js"><link rel="prefetch" href="/assets/js/17.c98e494a.js"><link rel="prefetch" href="/assets/js/18.188f8d97.js"><link rel="prefetch" href="/assets/js/19.c31ff5fd.js"><link rel="prefetch" href="/assets/js/20.3ec62c7f.js"><link rel="prefetch" href="/assets/js/3.c6419566.js"><link rel="prefetch" href="/assets/js/4.f607040b.js"><link rel="prefetch" href="/assets/js/5.aa867cda.js"><link rel="prefetch" href="/assets/js/6.b793aba6.js"><link rel="prefetch" href="/assets/js/7.0f7dc53b.js"><link rel="prefetch" href="/assets/js/8.e278df74.js"><link rel="prefetch" href="/assets/js/9.9c85a9aa.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.47262665.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><!----> <span class="site-name">Front End</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/ts/" class="nav-link router-link-active">TypeScript</a></div><div class="nav-item"><a href="/js/" class="nav-link">JavaScript</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/ts/" class="nav-link router-link-active">TypeScript</a></div><div class="nav-item"><a href="/js/" class="nav-link">JavaScript</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>TS基础</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/ts/type.html" class="sidebar-link">类型</a></li><li><a href="/ts/interface.html" class="sidebar-link">接口</a></li><li><a href="/ts/function.html" class="sidebar-link">函数</a></li><li><a href="/ts/class.html" class="sidebar-link">类</a></li><li><a href="/ts/generics.html" class="sidebar-link">泛型</a></li><li><a href="/ts/compatibility.html" class="sidebar-link">类型兼容</a></li><li><a href="/ts/guards.html" class="sidebar-link">类型保护</a></li><li><a href="/ts/advanced.html" class="sidebar-link">高级类型</a></li><li><a href="/ts/module.html" class="sidebar-link">模块系统</a></li><li><a href="/ts/namespace.html" class="sidebar-link">命名空间</a></li><li><a href="/ts/merge.html" class="active sidebar-link">申明合并</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/ts/merge.html#命名空间合并" class="sidebar-link">命名空间合并</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="申明合并"><a href="#申明合并" aria-hidden="true" class="header-anchor">#</a> 申明合并</h1> <div class="language-ts extra-class"><pre class="language-ts"><code><span class="token keyword">interface</span> <span class="token class-name">A</span> <span class="token punctuation">{</span>
+  x<span class="token punctuation">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">interface</span> <span class="token class-name">A</span> <span class="token punctuation">{</span>
+  y<span class="token punctuation">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">let</span> a<span class="token punctuation">:</span> <span class="token constant">A</span> <span class="token comment">// 合并上面两个申明</span>
+</code></pre></div><h2 id="命名空间合并"><a href="#命名空间合并" aria-hidden="true" class="header-anchor">#</a> 命名空间合并</h2> <p>命名空间可以和<code>接口</code>合并</p> <p>命名空间可以和<code>类</code>合并</p> <p>命名空间可以和<code>枚举</code>合并</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+        ←
+        <a href="/ts/namespace.html" class="prev">
+          命名空间
+        </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.7643ad65.js" defer></script><script src="/assets/js/2.a21d1c86.js" defer></script><script src="/assets/js/16.448e2909.js" defer></script>
+  </body>
+</html>
